@@ -21,7 +21,10 @@ It uses the current TinyUSB library and the Bare API to create the USB Host (NOT
 As I am learning Pico Pi this is basically just a POC of code I've found. If you want to use it and have questions please raise an issue - I promise to try to help.  
 
 
-Complete build from scratch intructions (tested on WSL 2 under Windows):   
+Complete build from scratch instructions (scratch meaning - no Pico Pi SDK, nothing - an empty environment) 
+Tested on WSL 2 under Windows, which is a good safe test environment because you can just delete the WSL image.   
+
+
 
 ```
 cd ~
