@@ -56,7 +56,7 @@ export PICO_SDK_PATH=~/pico_base/pico-sdk  # your SDK location
 cd ~
 git clone https://github.com/paulhamsh/PicoPiUSBMidiHostDevice
 cd PicoPiUSBMidiHostDevice/midi_host_dev_ssd
-cp $PICO_SDK_PATH/pico-sdk/external/pico_sdk_import.cmake .
+cp $PICO_SDK_PATH/external/pico_sdk_import.cmake .
 mkdir build
 cd build
 
