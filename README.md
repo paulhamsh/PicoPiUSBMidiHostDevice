@@ -34,7 +34,7 @@ cd pico-sdk
 git submodule update --init
 
 # For PICO support
-cd pico-sdk/lib
+cd lib
 rm -R tinyusb
 git clone https://github.com/hathach/tinyusb  -b master
 cd tinyusb
