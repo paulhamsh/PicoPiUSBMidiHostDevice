@@ -9,7 +9,7 @@ Just as a test this code also sends a colour to the second keypad on the Launchk
 
 Uses code adopted from: https://github.com/hathach/tinyusb   
 And the SSD 1306 library from: https://github.com/daschr/pico-ssd1306   
-And relies on the code from there, which is in the TinyUSB library: https://github.com/sekigon-gonnoc/Pico-PIO-USB   
+And relies on the code from here, which is in the TinyUSB library: https://github.com/sekigon-gonnoc/Pico-PIO-USB   
 
 Creates a MIDI device via the main USB port, and a MIDI host using Pico-PIO-USB.   
 The PIO USB is attached to GPIO 6 (pin 9) and GPIO 7 (pin 10)   
