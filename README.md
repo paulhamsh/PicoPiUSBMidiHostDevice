@@ -1,7 +1,7 @@
 # Pico Pi USB Midi Host Device
 A MIDI host and device using Pico Pi and PIO USB   
 
-Currently a bit dull - will recognise a 2 USB endpoint USB Midi device plugged into the host, and copy the MIDI messages to the MIDI Device.   
+Currently a bit dull - will recognise a 2 USB endpoint USB Midi device plugged into the host, and copy the MIDI messages to the MIDI Device, so they can be seen by anything you plug the device into.    
 Basically a rudimentary passthough.   
 
 Only tested with a Novation Launchkey 25, a Keith McMillen K Board and a Morninstar MC6 MkI.   
