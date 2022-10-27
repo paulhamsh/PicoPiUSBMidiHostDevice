@@ -38,7 +38,7 @@ cd lib
 rm -R tinyusb
 git clone https://github.com/hathach/tinyusb  -b master
 cd tinyusb
-git submodule update --init --recursive
+git submodule update --init --recursive    # this is slow!
 
 # This doesn't work
 # cd pico_base/pico-sdk/lib/tinyusb/hw/mcu/raspberry_pi
