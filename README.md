@@ -1,5 +1,11 @@
-# PicoPiusbMidiHostDevice
+# Pico Pi USB Midi Host Device
 A MIDI host and device using Pico Pi and PIO USB   
+
+Currently a bit dull - will recognise a 2 USB endpoint USB Midi device plugged into the host, and copy the MIDI messages to the MIDI Device.   
+Basically a rudimentary passthough.   
+
+Only tested with a Novation Launchkey 25, a Keith McMillen K Board and a Morninstar MC6 MkI.   
+Just as a test this code also sends a colour to the second keypad on the Launchkey 25.   
 
 Uses code adopted from: https://github.com/hathach/tinyusb   
 And the SSD 1306 library from: https://github.com/daschr/pico-ssd1306   
@@ -12,7 +18,10 @@ There is also a serial output on GPIO 0 (pin 1)
 
 It uses the current TinyUSB library and the Bare API to create the USB Host (NOT reliant on the currently un-merged USB Host MIDI class: https://github.com/rppicomidi/midi2usbhost.git)
 
-Complete build from scratch intructions:
+As I am learning Pico Pi this is basically just a POC of code I've found. If you want to use it and have questions please raise an issue - I promise to try to help.  
+
+
+Complete build from scratch intructions (tested on WSL 2 under Windows):   
 
 ```
 cd ~
