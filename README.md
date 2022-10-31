@@ -77,7 +77,7 @@ cp *.uf2 /mnt/c/Users/USER/Desktop/
 And replace USER with your user name.   
 Then copy over to the Pico Pi from Windows proper.  
 
-** CMakeLists.txt **
+## CMakeLists.txt
 
 ```
 cmake_minimum_required(VERSION 3.13)
@@ -149,7 +149,7 @@ pico_enable_stdio_uart(${target_name} 1)
 ```
 
 
-**tusb_config.h**
+##tusb_config.h
 
 ```
 
