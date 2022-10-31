@@ -149,7 +149,7 @@ pico_enable_stdio_uart(${target_name} 1)
 ```
 
 
-##tusb_config.h
+## tusb_config.h
 
 ```
 
