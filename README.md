@@ -167,6 +167,13 @@ pico_enable_stdio_uart(${target_name} 1)
 
 ## tusb_config.h
 
+tusb_config.h is used to configure the USB library.   The comments starting ```////``` are to show the key parts needed to trigger the required options.   
+We are using DEVICE and HOST modes, so need to tell it which RHPORT to use for each.
+Then we need to say that TUH and TUD modes are enabled.   
+We need to define CFG_TUH_RPI_PIO_USB to enable the PIO-USB capability.   
+We define CFG_TUD_MIDI to include the standard class for the MIDI USB device.    
+
+
 ```
 #ifndef _TUSB_CONFIG_H_
 #define _TUSB_CONFIG_H_
