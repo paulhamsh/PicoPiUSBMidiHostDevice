@@ -47,7 +47,6 @@ git submodule update --init --recursive    # this is slow!
 # cd pico_base/pico-sdk/lib/tinyusb/hw/mcu/raspberry_pi
 # git submodule update --init
 
-
 export PICO_SDK_PATH=~/pico_base/pico-sdk  # your SDK location
 
 # And for this program - start here but amend for your PICO_SDK_PATH
@@ -84,7 +83,7 @@ Then copy over to the Pico Pi from Windows proper.
 ```
 cmake_minimum_required(VERSION 3.13)
 
-# Needed for TinyUBS
+# Needed for TinyUSB
 set(FAMILY rp2040)
 
 include(pico_sdk_import.cmake)
