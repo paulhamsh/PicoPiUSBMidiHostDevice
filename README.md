@@ -74,7 +74,7 @@ cp *.uf2 /mnt/c/Users/USER/Desktop/
 And replace USER with your user name.   
 Then copy over to the Pico Pi from Windows proper.  
 
-# Explanation of code
+# Explanation of configuration
 
 ## CMakeLists.txt
 
