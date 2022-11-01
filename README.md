@@ -271,7 +271,7 @@ We define CFG_TUD_MIDI to include the standard class for the MIDI USB device.
 #define CFG_TUD_CDC               0
 #define CFG_TUD_MSC               0
 #define CFG_TUD_HID               0
-#define CFG_TUD_MIDI              1		//// To get MIDI device class
+#define CFG_TUD_MIDI              1		//// To get MIDI device class 
 #define CFG_TUD_VENDOR            0
 
 // MIDI FIFO size of TX and RX
