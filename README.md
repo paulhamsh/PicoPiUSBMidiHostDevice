@@ -36,12 +36,14 @@ git clone https://github.com/raspberrypi/pico-sdk
 cd pico-sdk
 git submodule update --init
 
-# For PICO support
+# For PICO support get latest TinyUSB not the branch used in Pico-SDK
 cd lib
 rm -R tinyusb
 git clone https://github.com/hathach/tinyusb  -b master
-cd tinyusb
-git submodule update --init --recursive    # this is slow!
+
+
+cd tinyusb/hw/mcu/raspberry_pi
+git clone https://github.com/sekigon-gonnoc/Pico-PIO-USB
 
 export PICO_SDK_PATH=~/pico_base/pico-sdk  # your SDK location
 
