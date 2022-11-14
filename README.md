@@ -163,6 +163,72 @@ pico_enable_stdio_uart(${target_name} 1)
 	
 ```
 
+## Alternative CMakeLists.txt using the TinyUSB 'family'
+
+```
+cmake_minimum_required(VERSION 3.5)
+
+include($ENV{PICO_SDK_PATH}/lib/tinyusb/hw/bsp/family_support.cmake)
+
+# gets PROJECT name for the example
+family_get_project_name(PROJECT ${CMAKE_CURRENT_LIST_DIR})
+project(${PROJECT})
+
+# Checks this example is valid for the family and initializes the project
+family_initialize_project(${PROJECT} ${CMAKE_CURRENT_LIST_DIR})
+
+add_executable(${PROJECT})
+
+# Example source
+target_sources(${PROJECT} PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/main.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/ssd1306.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/usb_descriptors.c
+        )
+
+# Example include
+target_include_directories(${PROJECT} PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+        )
+
+# Configure compilation flags and libraries for the example... see the corresponding function
+# in hw/bsp/FAMILY/family.cmake for details.
+family_configure_host_example(${PROJECT})
+family_configure_device_example(${PROJECT})
+
+# For rp2040, un-comment to enable pico-pio-usb
+family_add_pico_pio_usb(${PROJECT})
+
+# due to warnings from other net source, we need to prevent error from some of the warnings options
+target_compile_options(${PROJECT} PUBLIC
+        -Wno-error=shadow
+        -Wno-error=cast-align
+        -Wno-error=cast-qual
+        -Wno-error=redundant-decls
+        -Wno-error=sign-conversion
+        -Wno-error=conversion
+        -Wno-error=sign-compare
+        -Wno-error=unused-function
+        -Wno-error=discarded-qualifiers
+        -Wno-error=unused-parameter
+        -Wno-error=maybe-uninitialized
+        -Wno-cast-qual
+        -Wno-cast-align
+        -Wno-sign-compare
+        -Wno-shadow
+        -Wno-redundant-decls
+        -Wno-unused-function
+        )
+
+
+target_link_libraries(${PROJECT} PRIVATEA
+	# for SSD
+        hardware_i2c
+)
+
+pico_enable_stdio_usb(${PROJECT} 0)
+pico_enable_stdio_uart(${PROJECT} 1)
+```
 
 ## tusb_config.h
 
