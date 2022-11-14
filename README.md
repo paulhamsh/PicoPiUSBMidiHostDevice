@@ -41,10 +41,6 @@ cd lib
 rm -R tinyusb
 git clone https://github.com/hathach/tinyusb  -b master
 
-# For PICO support
-cd pico-sdk/lib
-rm -R tinyusb
-git clone https://github.com/hathach/tinyusb  -b master
 cd tinyusb
 git submodule update --init --recursive
 
