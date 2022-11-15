@@ -75,7 +75,7 @@ Then copy over to the Pico Pi from Windows proper.
 
 # Explanation of configuration
 
-## CMakeLists.txt
+## CMakeLists.txt (minimal TinyUSB 'family' support)
 
 ```
 # Standard Pico cmake entries
@@ -163,7 +163,7 @@ pico_enable_stdio_uart(${target_name} 1)
 	
 ```
 
-## Alternative CMakeLists.txt using the TinyUSB 'family'
+## Alternative CMakeLists.txt (using the TinyUSB 'family' support)
 
 ```
 cmake_minimum_required(VERSION 3.5)
