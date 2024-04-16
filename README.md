@@ -44,6 +44,10 @@ git clone https://github.com/hathach/tinyusb  -b master
 cd tinyusb
 git submodule update --init --recursive
 
+# And then do this - new extra step
+
+python3 tools/get_deps.py rp2040
+
 export PICO_SDK_PATH=~/pico_base/pico-sdk  # your SDK location
 
 # And for this program - start here but amend for your PICO_SDK_PATH
